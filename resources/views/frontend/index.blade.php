@@ -33,7 +33,7 @@
             <div class="card">
               <img src="{{$product->image}}" style="height: 50px" alt="" sizes="" srcset="">
               <div class="card-body">
-                <h5>{{$product->selling_price}}</h5>
+                <h5>{{$product->selling_price}}$</h5>
               </div>
 
             </div>
@@ -43,6 +43,101 @@
 
         </div>
 
+        </div>
+        <div class="container">
+          <div class="row">
+            
+            
+            
+            <div class="card col">
+              <div class="row">
+                @foreach ($lastThreeproducts as $lastThreeproduct )
+                <div class="col-md-4">
+                 
+                  <div class="card-body">
+                    <h5 class="card-title">{{$lastThreeproduct->name}}</h5>
+                    <p class="card-text">{{$lastThreeproduct->description}}</p>
+                    <p class="card-text"><small class="text-muted">    Last updated 3 mins ago</small></p>
+                  </div>
+                  <img src="{{$lastThreeproduct->image}}" style="height: 180px" class="card-img-bottom" alt="...">
+                </div>
+                @endforeach
+              </div>
+
+        
+            </div>
+          
+          </div>
+        </div>
+        <div class="container">
+          <h2>Meet the team</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="https://via.placeholder.com/350x200" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">John Doe</h5>
+                  <p class="card-text">CEO</p>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac erat auctor, aliquet purus in, pulvinar quam. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="https://via.placeholder.com/350x200" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Jane Doe</h5>
+                  <p class="card-text">COO</p>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac erat auctor, aliquet purus in, pulvinar quam. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="https://via.placeholder.com/350x200" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Bob Smith</h5>
+                  <p class="card-text">CTO</p>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac erat auctor, aliquet purus in, pulvinar quam. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <h2>Latest blog posts</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="https://via.placeholder.com/350x200" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Blog post 1</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac erat auctor, aliquet purus in, pulvinar quam. </p>
+                  <a href="#" class="btn btn-primary">Read more</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="https://via.placeholder.com/350x200" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Blog post 2</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac erat auctor, aliquet purus in, pulvinar quam. </p>
+                  <a href="#" class="btn btn-primary">Read more</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="https://via.placeholder.com/350x200" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Blog post 3</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac erat auctor, aliquet purus in, pulvinar quam. </p>
+                  <a href="#" class="btn btn-primary">Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

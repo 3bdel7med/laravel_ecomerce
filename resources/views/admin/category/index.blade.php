@@ -3,6 +3,11 @@
 <div class="card">
     <div class="card-header">
         <h3>Categories</h3>
+        <div class="row">
+            <div class="cool"></div>
+            <div class="cool"><button class="btn btn-primary"><a href="/categories/create">Add New</a></button></div>
+            <div class="cool"></div>
+        </div>
     </div>
     <div class="card-body">
     <table class="table">

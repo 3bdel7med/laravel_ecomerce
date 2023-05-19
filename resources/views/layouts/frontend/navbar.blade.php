@@ -3,8 +3,8 @@
         <div class="row align-items-center">
           <div class="col-md-2">
             <a href="#" class="">
-              <img src="https://via.placeholder.com/50x50" alt="Logo">
-              My Site
+              <img src="{{asset('images/download (1).png')}}" style="border-radius: 50%" alt="Logo">
+              
             </a>
           </div>
           <div class="col-md-5">
@@ -32,6 +32,7 @@
               @else
               (0)
             @endif
+
             </a>
            
             <a href="#" class=" me-3"><i class="bi bi-heart"></i> Wishlist</a>
@@ -43,50 +44,63 @@
 
                   
               @endif
+              
             </a>
             <i id="theme-toggle" class="bi bi-{{ $theme == 'dark' ? 'sun' : 'moon' }}"></i>
-            <a href="#" class=""><i class="bi bi-gear"></i></a>
+            
           </div>
+          
         </div>
       </div>
     </header>
-    <div class="row">
-	<div id="slider" class="carousel slide" data-bs-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-bs-target="#slider" data-bs-slide-to="0" class="active"></li>
-    <li data-bs-target="#slider" data-bs-slide-to="1"></li>
-    <li data-bs-target="#slider" data-bs-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img style="height:300px;" src="/images/1.jpg" class="d-block w-100" alt="Slide 1">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Slide 1 Title</h5>
-        <p>Slide 1 Description</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img style="height:300px;" src="/images/2.jpg" class="d-block w-100" alt="Slide 2">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Slide 2 Title</h5>
-        <p>Slide 2 Description</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img style="height:300px;" src="/images/3.jpg" class="d-block h-30 w-100" alt="Slide 3">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Slide 3 Title</h5>
-        <p>Slide 3 Description</p>
-      </div>
-    </div>
+<div class="row">
+  <div class="col">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to my website</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div> 
   </div>
-  <a class="carousel-control-prev" href="#slider" role="button" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#slider" role="button" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </a>
-</div>
+  <div class="row col">
+    <div id="slider" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#slider" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#slider" data-bs-slide-to="1"></li>
+      <li data-bs-target="#slider" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img style="height:300px;" src="/images/1.jpg" class="d-block w-100" alt="Slide 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Slide 1 Title</h5>
+          <p>Slide 1 Description</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img style="height:300px;" src="/images/2.jpg" class="d-block w-100" alt="Slide 2">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Slide 2 Title</h5>
+          <p>Slide 2 Description</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img style="height:300px;" src="/images/3.jpg" class="d-block h-30 w-100" alt="Slide 3">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Slide 3 Title</h5>
+          <p>Slide 3 Description</p>
+        </div>
+      </div>
     </div>
+    <a class="carousel-control-prev" href="#slider" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#slider" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+</div>
+</div>

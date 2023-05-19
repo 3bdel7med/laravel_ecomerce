@@ -7,6 +7,7 @@ use App\Models\Review;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,7 +16,11 @@ class FrontendController extends Controller
     public function index(){
         $categories=Category::where('status','1')->take(3)->get();
         $products=Product::where('trading','1')->take(10)->get();
-        return view('frontend.index',compact('products','categories'));
+        $lastThreeproducts = DB::table('products')
+        ->latest()
+        ->take(3)
+        ->get();
+        return view('frontend.index',compact('products','categories','lastThreeproducts'));
     }
     public function showcategory(){
         $categories=Category::all();

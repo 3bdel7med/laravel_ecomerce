@@ -24,7 +24,7 @@ class CartController extends Controller
         $id=Auth::id();
         $cart=Cart::where('user_id',$id)->get();
      
-        return view('frontend.cart',compact('cart','total'));
+        return view('frontend.cart',compact('cart'));
 
     }
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\RatingController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ChatMessageController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Frontend\FrontendController;
 
 /*
@@ -47,9 +48,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get('/dashboard', function () {
-    return view('admin.index');
-})->middleware('admin');
+Route::get('/dashboard',[DashboardController::class,'index'])->middleware('admin');
 Route::get('/welcome', function () {
    return view('welcome') ;
 });
